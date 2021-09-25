@@ -8,7 +8,7 @@
 html{
     scroll-behavior: smooth;
 }
-/* Custom Scroll Bar */
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -21,26 +21,32 @@ html{
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-/*  Content Styling Codes */
+
 section{
     padding: 100px 0;
+}
+.circle-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(400px at right 1000px);
+}
+.circle-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(400px at left 1000px);
 }
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
-}
-.about, .passionates, .skills, .organization, .contact{
-    font-family: 'Poppins', sans-serif;
-}
-.about .about-content,
-.passionates .pass-content,
-.skills .skills-content,
-.contact .contact-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 section .title{
     position: relative;
@@ -71,7 +77,7 @@ section .title::after{
     background: #fff;
     transform: translateX(-50%);
 }
-/* navbar styling */
+
 .navbar{
     position: fixed;
     width: 100%;
@@ -82,24 +88,32 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background:white;
 }
 .navbar .max-width{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color:#555;
 }
 .navbar .logo a{
-    color: #fff;
+    color:yellowgreen;
     font-size: 35px;
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: crimson;
+    color: green;
     transition: all 0.3s ease;
 }
+.navbar .logo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17%;
+    padding: 5px 100px;
+}
 .navbar.sticky .logo a span{
-    color: #fff;
+    color: green;
 }
 .navbar .menu li{
     list-style: none;
@@ -107,21 +121,21 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color:black;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: crimson;
+    color: yellow;
 }
 .navbar.sticky .menu li a:hover{
-    color: #fff;
+    color:yellowgreen;
 }
-/* menu btn styling */
+
 .menu-btn{
-    color: #fff;
+    color: black;
     font-size: 23px;
     cursor: pointer;
     display: none;
@@ -130,12 +144,12 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background:yellow;
     right: 30px;
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #fff;
+    color:yellowgreen;
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -153,12 +167,12 @@ section .title::after{
 .scroll-up-btn:hover{
     filter: brightness(90%);
 }
-/* home section styling */
+
 .home{
     display: flex;
-    background: url("background.jpg") no-repeat center;
+    background: url("RE 2.jpg") no-repeat center;
     height: 100vh;
-    color: #fff;
+    color: black;
     min-height: 500px;
     background-size: cover;
     background-attachment: fixed;
@@ -172,357 +186,70 @@ section .title::after{
   margin-right: 0;
 }
 .home .home-content .text-1{
-    font-size: 27px;
+    font-size: 60px;
+    font-family: montserrat;
+    color: green;
 }
 .home .home-content .text-2{
-    font-size: 75px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 400;
     margin-left: -3px;
+    font-family: montserrat;
+    color: yellowgreen;
+}
+.home .home-content .left p{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    width: 55%;
+    font-family: montserrat;
+}
+.home .home-content .left img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-left: 70%;
+    margin-top: -50%;
 }
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
+    font-family: montserrat;
+    color: 
 }
 .home .home-content .text-3 span{
-    color: crimson;
+    color: orange;
     font-weight: 500;
+    font-family: montserrat;
 }
 .home .home-content a{
     display: inline-block;
-    background: crimson;
+    background: yellow;
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid green;
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: crimson;
+    color: yellowgreen;
     background: none;
 }
-/* about section styling */
-.about .title::after{
-    content: "Who I am";
-}
-.about .about-content .left{
-    width: 45%;
-}
-.about .about-content .left img{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.about .about-content .right{
-    width: 55%;
-}
-.about .about-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.about .about-content .right .text span{
-    color: crimson;
-}
-.about .about-content .right p{
-    text-align: justify;
-}
-.about .about-content .right a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.about .about-content .right a:hover{
-    color: crimson;
-    background: none;
-}
-/* services section styling */
-.passionates, .organization{
-    color:#fff;
-    background: #111;
-}
-.passionates .title::before,
-.organization .title::before{
-    background: #fff;
-}
-.passionates .title::after,
-.organization .title::after{
-    background: #111;
-    content: "What I Interest?";
-}
-.passionates .pass-content .card{
-    width: calc(35% - 20px);
-    background: #222;
-    text-align: justify;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.passionates .pass-content .card:hover{
-    background: crimson;
-}
-.passionates .pass-content .card .box{
-    transition: all 0.3s ease;
-}
-.passionates .pass-content .card:hover .box{
-    transform: scale(1.05);
-}
-.passionates .pass-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.passionates .pass-content .card:hover i{
-    color: #fff;
-}
-.passionates .pass-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 5px 0;
-}
-/* skills section styling */
-.skills .title::after{
-    content: "What can I do?";
-}
-.skills .skills-content .column{
-    width: calc(50% - 30px);
-}
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.skills .skills-content .left p{
-    text-align: justify;
-}
-.skills .skills-content .left a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover{
-    color: crimson;
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
+.rectangle{
+    width: 60%;
+    height: 50%;
+    background: yellow;
+    border-radius: 20px;
     display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: crimson;
-}
-.skills-content .right .html::before{
-    width: 80%;
-}
-.skills-content .right .css::before{
-    width: 70%;
-}
-.skills-content .right .js::before{
-    width: 40%;
-}
-.skills-content .right .php::before{
-    width: 30%;
-}
-.skills-content .right .mysql::before{
-    width: 30%;
-}
-/* teams section styling */
-.organization .title::after{
-    content: "What I Joined?";
-}
-.organization .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.organization .carousel .card:hover{
-    background: crimson;
-}
-.organization .carousel .card .box{
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
-}
-.organization .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.organization .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.organization .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
-}
-.organization .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: crimson!important;
-}
-/* contact section styling */
-.contact .title::after{
-    content: "Any Problem?";
-}
-.contact .contact-content .column{
-    width: calc(50% - 30px);
-}
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.contact .contact-content .left p{
-    text-align: justify;
-}
-.contact .contact-content .left .icons{
-    margin: 10px 0;
-}
-.contact .contact-content .row{
-    display: flex;
-    height: 65px;
-    align-items: center;
-}
-.contact .contact-content .row .info{
-    margin-left: 30px;
-}
-.contact .contact-content .row i{
-    font-size: 25px;
-    color: crimson;
-}
-.contact .contact-content .info .head{
-    font-weight: 500;
-}
-.contact .contact-content .info .sub-title{
-    color: #333;
-}
-.contact .right form .fields{
-    display: flex;
-}
-.contact .right form .field,
-.contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-.contact .right form .textarea{
-    height: 80px;
-    width: 100%;
-}
-.contact .right form .name{
-    margin-right: 10px;
-}
-.contact .right form .field input,
-.contact .right form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
-}
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
-    border-color: #b3b3b3;
-}
-.contact .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
-}
-.contact .right form .button-area{
-  display: flex;
-  align-items: center;
-}
-.right form .button-area button{
-  color: #fff;
-  display: block;
-  width: 160px!important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
-}
-.right form .button-area button:hover{
-  color: crimson;
-  background: none;
 }
 
-/* responsive media query start */
 @media (max-width: 1104px) {
     .about .about-content .left img{
         height: 350px;
@@ -574,29 +301,6 @@ section .title::after{
         font-size: 23px;
         padding: 10px 30px;
     }
-    .max-width{
-        max-width: 930px;
-    }
-    .about .about-content .column{
-        width: 100%;
-    }
-    .about .about-content .left{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about .about-content .right{
-        flex: 100%;
-    }
-    .passionates .pass-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-    .skills .skills-content .column,
-    .contact .contact-content .column{
-        width: 100%;
-        margin-bottom: 35px;
-    }
 }
 @media (max-width: 690px) {
     .max-width{
@@ -611,9 +315,6 @@ section .title::after{
     .home .home-content a{
         font-size: 20px;
     }
-    .passionates .pass-content .card{
-        width: 100%;
-    }
 }
 @media (max-width: 500px) {
     .home .home-content .text-2{
@@ -621,20 +322,6 @@ section .title::after{
     }
     .home .home-content .text-3{
         font-size: 27px;
-    }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text{
-        font-size: 19px;
-    }
-    .contact .right form .fields{
-        flex-direction: column;
-    }
-    .contact .right form .name,
-    .contact .right form .email{
-        margin: 0;
-    }
-    .right form .error-box{
-       width: 150px;
     }
     .scroll-up-btn{
         right: 15px;
